@@ -15,3 +15,24 @@ function getComputerChoice(){
     }
     return choice;
 }
+
+//To get Human Choice
+function getHumanChoice(){
+//Use prompt to get a text input, either rock, paper or scissors
+choice = prompt('Enter Rock, Paper or Scissors:');
+//convert it to lowercase so that its easier to compare
+lowerChoice = choice.toLowerCase();
+//Return the value
+if (lowerChoice == 'rock'){
+    return 'Rock';
+}
+else if(lowerChoice == 'paper'){
+    return 'Paper';
+}
+else if(lowerChoice == 'scissors'){
+    return 'Scissors';
+}
+else {
+    return null;
+}
+}
