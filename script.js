@@ -73,6 +73,7 @@ let scissor = document.querySelector('#scissor');
 let anounce = document.querySelector('#anounce');
 image1 = document.querySelector('#humanHand');
 image2 = document.querySelector('#computerHand');
+
 rock.addEventListener('click',function (){
     image1.src = 'images/rock.jpeg';
     image2.src = 'images/rockReverse.png';
@@ -84,6 +85,15 @@ rock.addEventListener('click',function (){
         animate(image1,false); 
         animate(image2,true);   
     },1000);
+    setTimeout(function(){
+        image1.src = 'images/rock.jpeg';
+        if(computerChoice == 'Paper'){
+            image2.src = 'images/paper.jpeg';
+        }
+        else if(computerChoice == 'Scissors'){
+            image2.src = 'images/scissor.jpeg';
+        }
+    },1900);
 });
 paper.addEventListener('click',function (){
     computerChoice = getComputerChoice();
